@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+<body>
+    <section class="banner" id="sec">
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+        <div class="content">
+            <h2>Hello World, <br>I'm <span>Saitgalin Iskander</span></h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, nisi. Porro sed, deserunt inventore dolores ipsam atque voluptas deleniti! Ipsa harum consequuntur reprehenderit ipsam non iure sit. Voluptate, nesciunt harum?</p>
+            <a href="#">Know More</a>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="./Img/facebook.png" alt="facebook"></a></li>
+            <li><a href="№"><img src="./Img/Telegram.svg" alt="facebook"></a></li>
+            <li><a href="#"><img src="./Img/twitter.png" alt="facebook"></a></li>
+        </ul>
+    </section>
+    <div id="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    function toggle(){
+        var sec = document.getElementById('sec');
+        var nav = document.getElementById('navigation');
+        sec.classList.toggle('active');
+        nav.classList.toggle('active');
+    }
+    </script>
+</body>
+</html>
