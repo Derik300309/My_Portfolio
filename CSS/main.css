@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 header
@@ -12,10 +20,16 @@ header
     top: 0;
     left: 0;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 40px 100px;
     z-index: 10000;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
     transition: 0.6s;
 }
 header .logo
@@ -27,6 +41,8 @@ header .logo
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
     transition: 0.6s;
 }
 header #toggle
@@ -58,13 +74,17 @@ header #toggle::after
 {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        -ms-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
 }
 .banner.active header #toggle::after
 {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+        -ms-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
 }
 .banner
 {
@@ -74,15 +94,23 @@ header #toggle::after
     padding: 100px;
     background: url(../Img/bg.jpg);
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     z-index: 2;
 }
 .banner.active,
 .about.active
 {
-    transform: translate(-400px);
+    -webkit-transform: translate(-400px);
+        -ms-transform: translate(-400px);
+            transform: translate(-400px);
 }
 #navigation
 {
@@ -93,8 +121,11 @@ header #toggle::after
     height: 100vh;
     background: #40c3ff;
     z-index: 1;
+    display: -ms-grid;
     display: grid;
     place-items: center;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 #navigation.active
@@ -104,8 +135,13 @@ header #toggle::after
 #navigation ul
 {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 #navigation ul li
 {
@@ -138,13 +174,21 @@ header #toggle::after
 @media (min-width: 767px)
 {
     .content h2 span::before {  
-        transform: scaleX(0);
-        transform-origin: bottom right;
+        -webkit-transform: scaleX(0);  
+            -ms-transform: scaleX(0);  
+                transform: scaleX(0);
+        -webkit-transform-origin: bottom right;
+            -ms-transform-origin: bottom right;
+                transform-origin: bottom right;
       }
       
       .content h2 span:hover::before {
-        transform: scaleX(1);
-        transform-origin: bottom left;
+        -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+                transform: scaleX(1);
+        -webkit-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
+                transform-origin: bottom left;
       }
       
       .content h2 span::before {
@@ -155,7 +199,11 @@ header #toggle::after
         inset: 0 0 0 0;
         background: #0e7bad;
         z-index: -1;
+        -webkit-transition: -webkit-transform .3s ease;
+        transition: -webkit-transform .3s ease;
+        -o-transition: transform .3s ease;
         transition: transform .3s ease;
+        transition: transform .3s ease, -webkit-transform .3s ease;
       }
 }
 .content p
@@ -179,8 +227,13 @@ header #toggle::after
 .sci
 {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     right: 100px;
 }
 .sci li
@@ -190,6 +243,7 @@ header #toggle::after
 .sci li a
 {
     position: relative;
+    display: -ms-grid;
     display: grid;
     place-items: center;
     width: 50px;
@@ -197,6 +251,8 @@ header #toggle::after
     text-decoration: none;
     border: 1px solid #fff;
     margin: 10px 0 0;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 .sci li a:hover
@@ -206,7 +262,8 @@ header #toggle::after
 .sci li a img
 {
     max-width: 20px;
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
     mix-blend-mode: difference;
 }
 .about
@@ -275,9 +332,12 @@ header #toggle::after
     {
         font-size: 1em;
     }
-    .banner.active
+    .banner.active,
+    .about.active
     {
-        transform: translate(-250px);
+        -webkit-transform: translate(-250px);
+            -ms-transform: translate(-250px);
+                transform: translate(-250px);
     }
     #navigation
     {
@@ -293,7 +353,10 @@ header #toggle::after
         position: absolute;
         bottom: 50px;
         right: initial;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     .sci li a
     {
