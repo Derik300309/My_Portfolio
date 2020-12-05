@@ -79,7 +79,8 @@ header #toggle::after
     transition: 0.5s;
     z-index: 2;
 }
-.banner.active
+.banner.active,
+.about.active
 {
     transform: translate(-400px);
 }
@@ -87,7 +88,7 @@ header #toggle::after
 {
     position: fixed;
     top: 0;
-    right: -200px;
+    right: -400px;
     width: 400px;
     height: 100vh;
     background: #40c3ff;
@@ -207,6 +208,53 @@ header #toggle::after
     max-width: 20px;
     filter: invert(1);
     mix-blend-mode: difference;
+}
+.about
+{
+    min-height: 100vh;
+    background: #fff;
+    width: 100%;
+}
+.about h1
+{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 3em;
+    font-weight: 900;
+}
+.about .textBx
+{
+    max-width: 600px;
+    margin: 60px 0 0 40px;
+    float: left;
+}
+.about .textBx p
+{
+    padding: 0 0 50px;
+}
+.about .imgBx
+{
+    max-width: 700px;
+    float: right;
+    margin: 80px 40px 0 0;
+}
+.about .imgBx img
+{
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 1440px)
+{
+    .about .textBx
+    {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+    .about .imgBx
+    {
+        max-width: 100%;
+        margin: 0 20px;
+    }
 }
 @media (max-width: 767px)
 {
