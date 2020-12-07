@@ -8,7 +8,16 @@
 </head>
 <body>
     <section class="banner" id="sec">
-        <header>
+        <div id="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <header id="nav">
             <a href="#" class="logo">Logo</a>
             <div id="toggle" onclick="toggle()"></div>
         </header>
@@ -33,15 +42,6 @@
             <img src="./Img/about.jpeg" alt="">
         </div>
     </section>
-    <div id="navigation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
     <script type="text/javascript">
     function toggle(){
         var sec = document.getElementById('sec');

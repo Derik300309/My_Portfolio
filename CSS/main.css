@@ -16,7 +16,6 @@
 }
 header
 {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,13 +25,14 @@ header
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 40px 100px;
-    z-index: 10000;
+    padding: 20px 100px;
+    z-index: 900;
     -webkit-transition: 0.6s;
     -o-transition: 0.6s;
     transition: 0.6s;
     position: fixed;
     background: #000;
+    align-items: center;
 }
 header .logo
 {
@@ -105,14 +105,7 @@ header #toggle::after
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    z-index: 2;
-}
-.banner.active,
-.about.active
-{
-    -webkit-transform: translate(-400px);
-        -ms-transform: translate(-400px);
-            transform: translate(-400px);
+    z-index: 3;
 }
 #navigation
 {
@@ -129,6 +122,7 @@ header #toggle::after
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    z-index: 4;
 }
 #navigation.active
 {
@@ -339,13 +333,6 @@ header #toggle::after
     .banner .content a
     {
         font-size: 1em;
-    }
-    .banner.active,
-    .about.active
-    {
-        -webkit-transform: translate(-250px);
-            -ms-transform: translate(-250px);
-                transform: translate(-250px);
     }
     #navigation
     {
